@@ -23,9 +23,6 @@ vim.g.maplocalleader = "\\"
 
 vim.opt.relativenumber = true
 vim.opt.number = true
-vim.api.nvim_set_hl(0, 'LineNr', { fg = "white"})
-vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = "orange"})
-vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = "orange"})
 
 
 -- Setup lazy.nvim

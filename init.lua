@@ -1,2 +1,2 @@
 require("config.init")
-require("lazy").setup("plugins")
+-- require("lazy").setup("plugins")

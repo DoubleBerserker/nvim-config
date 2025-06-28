@@ -1,10 +1,12 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
-		tag = "v0.9.3",
 		lazy = false,
+		tags = "v0.10.0",
 		build = ":TSUpdate",
 		config = function ()
+			-- Tried out 'main' branch but the following config breaks Telescope, so using 'master' v0.10.0 instead
+			-- require("nvim-treesitter").install({'c', 'lua', 'vim', 'cpp', 'go', 'bash', 'dockerfile', 'html', 'javascript', 'json', 'python', 'typescript'})
 		  local configs = require("nvim-treesitter.configs")
 
 		  configs.setup({

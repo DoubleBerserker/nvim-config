@@ -1,3 +1,5 @@
+-- Refer this to choose LSPs: https://microsoft.github.io/language-server-protocol/implementors/servers/
+
 return {
 	{
 		"mason-org/mason.nvim",
@@ -15,3 +17,4 @@ return {
 		dependencies = {"neovim/nvim-lspconfig"},
 	}
 }
+
