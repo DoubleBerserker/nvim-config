@@ -4,8 +4,24 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", {desc = "Move selection down"})
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", {desc = "Move selection up"})
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, {desc = "Go to Netrw Explorer"})
 
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = "Recenter cursor after scrolling down half page" })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = "Recenter cursor after scrolling up half page" })
+
+vim.keymap.set('n', 'n', 'nzzzv', { desc = "Recenter cursor after using find"})
+vim.keymap.set('n', 'N', 'Nzzzv', { desc = "Recenter cursor after using find"})
+
+vim.keymap.set('x', '<leader>p', "\"_dP", { desc = "Send deleted text to void buffer; doesn't replace paste buffer"})
+
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace word under cursor in entire file" })
+
+-- QuickFix Remaps
+vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
+vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+-- LSP Remaps
 autocmd('LspAttach', {
-    -- group = ThePrimeagenGroup,
     callback = function(e)
         local opts = { buffer = e.buf }
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
