@@ -10,11 +10,6 @@ return {
 			"<cmd>Trouble diagnostics toggle<cr>",
 			desc = "Diagnostics (Trouble)",
 		},
---		{
---			"<leader>cs",
---
---			desc = "Symbols (Trouble)",
---		},
 		{
 			"<leader>cl",
 			"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
