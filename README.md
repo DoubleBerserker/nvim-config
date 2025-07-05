@@ -23,3 +23,4 @@ Inspired by ThePrimeAgen's setup, check it out here: [ThePrimeAgen's Config](htt
 - [mbbill/undotree](https://github.com/mbbill/undotree)
 - [github/copilot.vim](https://github.com/github/copilot.vim)
 - [toppair/peek.nvim](https://github.com/toppair/peek.nvim)
+- [fatih/vim-go](https://github.com/fatih/vim-go)
